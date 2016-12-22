@@ -31,13 +31,13 @@
 		  <div class="form-group form-inline">
 		    <label for="username" class="col-sm-2 control-label">用户名：</label>
 		    <div class="col-sm-3">
-		    	<input ng-model="inputUsername" type="text" class="form-control" id="username" placeholder="请输入您的用户名">
+		    	<input ng-model="inputUsername" type="text" class="form-control" id="username" placeholder="请输入您的用户名" autocomplete="off">
 		    </div>
 		  </div>
 		  <div class="form-group form-inline">
 		    <label for="password" class="col-sm-2 control-label">密码：</label>
 		    <div class="col-sm-3">
-		   	 	<input ng-model="inputPassword" type="password" class="form-control" id="password" placeholder="请输入您的密码">
+		   	 	<input ng-model="inputPassword" type="password" class="form-control" id="password" placeholder="请输入您的密码" autocomplete="off">
 		    </div>
 		  </div>
 		  <div class="form-group">

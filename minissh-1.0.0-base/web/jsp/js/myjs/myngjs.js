@@ -29,6 +29,15 @@ angular.module("mainapp",[])
 			dataType:"json",
 			success:function(data){
 				console.log(data);
+                $scope.$apply(function(){
+                    if(data.success == true && data.message == "登录成功"){
+                        $scope.inputUsername = "";$scope.inputPassword = "";
+                        alert("登录成功!");
+                    }else if(data.success == false && data.message == "密码错误"){
+                        $scope.inputUsername = "";$scope.inputPassword = "";
+                        alert("密码错误!");
+                    }
+                });
 			}
 		});
 	};
@@ -44,7 +53,16 @@ angular.module("mainapp",[])
 				dataType:"json",
 				success:function(data){
 					console.log(data);
-				}
+                    $scope.$apply(function(){
+                        if(data.success == true && data.message == "注册成功"){
+                            $scope.inputUsername = "";$scope.inputPassword = "";
+                            alert("注册成功!");
+                        }else if(data.success == false && data.message == "该用户名已存在..."){
+                            $scope.inputUsername = "";$scope.inputPassword = "";
+                            alert("该用户名已被注册...");
+                        }
+                    });
+                }
 			});
 		}else{
 			alert("请将信息填写完整...");
